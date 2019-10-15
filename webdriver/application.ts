@@ -1,3 +1,5 @@
+import { BrowserObject, remote } from "webdriverio";
+import { WebDriverLogTypes } from "webdriver";
 import { ChromeDriver } from "./chrome_driver";
 import path from 'path';
 import DevNull from 'dev-null';
@@ -23,7 +25,7 @@ export class Application {
     debuggerAddress: string;
     webdriverLogPath: string;
     webdriverOptions: object;
-    client: WebdriverIOAsync.BrowserObject;
+    client: BrowserObject;
     running: boolean;
     chromeDriverRunning: boolean = false;
 
@@ -90,7 +92,7 @@ export class Application {
         return this.running;
     }
 
-    get Client(): WebdriverIOAsync.BrowserObject {
+    get Client(): BrowserObject {
         if (!this.isRunning())
             return null;
         return this.client;
@@ -151,16 +153,16 @@ export class Application {
                 }
             },
             logOutput: DevNull(),
-            logLevel: <WebDriver.WebDriverLogTypes>"silent"
+            logLevel: <WebDriverLogTypes>"silent"
         };
         if (self.webdriverLogPath) {
             options.logOutput = self.webdriverLogPath;
-            options.logLevel = <WebDriver.WebDriverLogTypes>'verbose';
+            options.logLevel = <WebDriverLogTypes>'verbose';
         }
 
         Object.assign(options, self.webdriverOptions);
 
-        self.client = WebdriverIOAsync.remote(options);
+        self.client = remote(options);
     }
 
     private async setTimeout(): Promise<void> {
