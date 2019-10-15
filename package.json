@@ -1,0 +1,36 @@
+{
+  "name": "spectron_webdriver5_ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "test": "nodemon --exec mocha --exit index.ts --require @babel/register --require ts-node/register --timeout 300000"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/register": "^7.5.5",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.6.8",
+    "@types/request": "^2.48.2",
+    "@types/split": "^1.0.0",
+    "dev-null": "^0.1.1",
+    "dotenv": "^8.1.0",
+    "electron": "4.0.5",
+    "mocha": "^6.2.0",
+    "request": "^2.88.0",
+    "split": "^1.0.1",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3",
+    "webdriverio": "^5.12.5"
+  },
+  "babel":{
+    "presets": [
+      [
+        "@babel/env"
+      ]
+    ]
+  }
+}
