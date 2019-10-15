@@ -1,3 +1,4 @@
+import { WebDriverLogTypes } from "webdriver";
 import { ChromeDriver } from "./chrome_driver";
 import path from 'path';
 import DevNull from 'dev-null';
@@ -151,11 +152,11 @@ export class Application {
                 }
             },
             logOutput: DevNull(),
-            logLevel: <WebDriver.WebDriverLogTypes>"silent"
+            logLevel: <WebDriverLogTypes>"silent"
         };
         if (self.webdriverLogPath) {
             options.logOutput = self.webdriverLogPath;
-            options.logLevel = <WebDriver.WebDriverLogTypes>'verbose';
+            options.logLevel = <WebDriverLogTypes>'verbose';
         }
 
         Object.assign(options, self.webdriverOptions);
