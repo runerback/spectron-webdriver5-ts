@@ -24,7 +24,7 @@
     "split": "^1.0.1",
     "ts-node": "^8.3.0",
     "typescript": "^3.5.3",
-    "webdriverio": "^5.12.5"
+    "webdriverio": "^5.15.0"
   },
   "babel":{
     "presets": [

@@ -1,9 +1,18 @@
 {
     "compilerOptions": {
-        "target": "es5",
+        "target": "esnext",
         "typeRoots": [
             "node_modules/@types"
         ],
-        "esModuleInterop": true
-    }
+        "esModuleInterop": true,
+        "baseUrl": ".",
+        "paths": {
+            "*": [ "./*" ],
+            "src/*": ["./src/*"]
+        },
+        "types": ["node", "webdriverio", "@types/mocha"]
+    },
+    "include": [
+        "./src/**/*.ts"
+    ]
 }
