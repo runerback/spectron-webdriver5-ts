@@ -89,3 +89,4 @@ typings/
 
 webdriver/bin/*
 yarn.lock
+dist/**/*

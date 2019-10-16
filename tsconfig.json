@@ -1,17 +1,22 @@
 {
     "compileOnSave": true,
     "compilerOptions": {
-        "target": "esnext",
+        "target": "es5",
         "module": "commonjs",
         "typeRoots": [
             "node_modules/@types"
         ],
         "allowSyntheticDefaultImports": true,
-        "esModuleInterop": true
+        "esModuleInterop": true,
+        "sourceMap": true,
+        "outDir": "./dist"
     },
     "include": [
         "./src/**/*.ts",
         "webdriver.d.ts",
         "webdriverio.d.ts"
+    ],
+    "files": [
+        "index.ts"
     ]
 }
