@@ -1,18 +1,21 @@
 {
+    "compileOnSave": true,
     "compilerOptions": {
+        "target": "esnext",
+        "module": "commonjs",
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+        "esModuleInterop": true,
         "baseUrl": ".",
         "paths": {
             "*": [ "./*" ],
             "src/*": ["./src/*"]
-        },
-        "types": ["node", "webdriverio", "@types/mocha"],
-        "target": "esnext",
-        "typeRoots": [
-            "node_modules/@types"
-        ],
-        "esModuleInterop": true
+        }
     },
     "include": [
-        "./src/**/*.ts"
+        "./src/**/*.ts",
+        "webdriver.d.ts",
+        "webdriverio.d.ts"
     ]
 }
