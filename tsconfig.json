@@ -1,4 +1,5 @@
 {
+    "compileOnSave": true,
     "compilerOptions": {
         "target": "esnext",
         "typeRoots": [
@@ -9,10 +10,10 @@
         "paths": {
             "*": [ "./*" ],
             "src/*": ["./src/*"]
-        },
-        "types": ["node", "webdriverio", "@types/mocha"]
+        }
     },
     "include": [
-        "./src/**/*.ts"
+        "./src/**/*.ts",
+        "webdriverio.d.ts"
     ]
 }
