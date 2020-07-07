@@ -18,7 +18,7 @@
     "@types/split": "^1.0.0",
     "dev-null": "^0.1.1",
     "dotenv": "^8.1.0",
-    "electron": "4.0.5",
+    "electron": "9.1.0",
     "mocha": "^6.2.0",
     "request": "^2.88.0",
     "split": "^1.0.1",
